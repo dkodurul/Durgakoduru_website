@@ -4,59 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Durga's Resume</title>
-</head>
-<body style="margin: 0; padding: 0; font-family: 'Poppins', sans-serif; background-color: #f7f9fc; color: #333; scroll-behavior: smooth;">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            scroll-behavior: smooth;
+        }
 
+        .landing-page {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
+            background-image: url('./assets/background.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .left-side, .right-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .left-side {
+            background-color: rgba(255, 255, 255, 0.50);
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        .right-side {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .right-side img.profile {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            filter: grayscale(30%);
+        }
+
+        .right-side h1 {
+            font-size: 40px;
+            margin: 5px 0;
+            color: #e5e6e7;
+        }
+
+        .right-side p {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .button-group a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-group a.resume {
+            background-color: #ee9886;
+        }
+
+        .button-group a.project, .button-group a.experience, .button-group a.education {
+            background-color: #a3c4f3;
+        }
+
+        .button-group img {
+            width: 30px; /* Adjusted size */
+            height: 30px; /* Adjusted size */
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .section {
+            padding: 60px 20px;
+            background-color: #f7f9fc;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .landing-page {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .left-side, .right-side {
+                flex: 1 1 auto;
+                margin: 10px 0;
+            }
+
+            .right-side img.profile {
+                width: 150px;
+                height: 150px;
+            }
+
+            .right-side h1 {
+                font-size: 30px;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .button-group a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
     <!-- Landing Page -->
-    <div style="display: flex; height: 100vh; background-image: url('./assets/background.png'); background-size: cover; background-position: center;">
-        <!-- Left Side -->
-        <div style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; background-color: rgba(255, 255, 255, 0.50); border-radius: 20px; margin: 20px;">
+    <div class="landing-page">
+        <!-- Left Side (About Me) -->
+        <div class="left-side">
             <div>
-                <h2 style="font-size: 40px; margin-bottom: 30px; text-align: center; color: #333; font-weight: 600;">About Me</h2>
-                <p style="font-size: 20px; color: #333; line-height: 1.8; text-align: center;">
+                <h2>About Me</h2>
+                <p>
                     I am an aspiring data scientist and data analytics professional with a passion for leveraging data to drive impactful insights. My goal is to continuously learn and grow in the field while contributing to innovative projects.
                 </p>
             </div>
         </div>
-        <!-- Right Side -->
-        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; text-align: center;">
-            <img src="./assets/Durga.jpg" alt="Durga's Photo" style="width: 180px; height: 180px; border-radius: 50%; margin-bottom: 20px; filter: grayscale(30%);">
-            <h1 style="font-size: 40px; margin: 5px 0; color: #e5e6e7;">Durga Chowdary<br>Koduru Lokesh </h1>
-            <p style="font-size: 20px; margin: 10px 0; color: #fff;">Aspiring Data Scientist & Data Analytics Professional</p>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 20px;">
-                <a href="https://www.linkedin.com/in/durgakoduri/" target="_blank" style="display: inline-block; margin: 0 10px; text-decoration: none;">
-                    <img src="./assets/linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #fff;">
+        <!-- Right Side (Contact & Buttons) -->
+        <div class="right-side">
+            <img src="./assets/Durga.jpg" alt="Durga's Photo" class="profile">
+            <h1>Durga Chowdary<br>Koduru Lokesh</h1>
+            <p>Aspiring Data Scientist & Data Analytics Professional</p>
+            <div class="button-group">
+                <a href="https://www.linkedin.com/in/durgakoduri/" target="_blank">
+                    <img src="./assets/linkedin.png" alt="LinkedIn">
                 </a>
-                <a href="https://github.com/dkodurul" target="_blank" style="display: inline-block; margin: 0 10px; text-decoration: none;">
-                    <img src="./assets/github.png" alt="GitHub" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #fff;">
+                <a href="https://github.com/dkodurul" target="_blank">
+                    <img src="./assets/github.png" alt="GitHub">
                 </a>
-                <a href="./assets/resume.pdf" style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #ee9886; border-radius: 25px; margin: 0 10px; transition: background-color 0.3s ease;">download resume</a>
+                <a href="./assets/resume.pdf" class="resume">Download Resume</a>
             </div>
-            <div style="margin-top: 30px;">
-                <a href="#projects" style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #a3c4f3; border-radius: 25px; margin: 0 10px; transition: background-color 0.3s ease;">Projects</a>
-                <a href="#experience" style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #a3c4f3; border-radius: 25px; margin: 0 10px; transition: background-color 0.3s ease;">Experience</a>
-                <a href="#education" style="color: #fff; text-decoration: none; padding: 10px 20px; background-color: #a3c4f3; border-radius: 25px; margin: 0 10px; transition: background-color 0.3s ease;">Education</a>
+            <div class="button-group">
+                <a href="#projects" class="project">Projects</a>
+                <a href="#experience" class="experience">Experience</a>
+                <a href="#education" class="education">Education</a>
             </div>
         </div>
     </div>
 
     <!-- Projects Section -->
-    <div id="projects" style="padding: 60px 20px; background-color: #f7f9fc;">
-        <h2 style="font-size: 32px; margin-bottom: 30px; text-align: center; color: #333;">Projects</h2>
-        <p style="font-size: 18px; color: #666; line-height: 1.8; text-align: center;">Details about my projects updating soon.....</p>
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+        <p>Details about my projects updating soon.....</p>
     </div>
 
     <!-- Experience Section -->
-    <div id="experience" style="padding: 60px 20px; background-color: #f7f9fc;">
-        <h2 style="font-size: 32px; margin-bottom: 30px; text-align: center; color: #333;">Experience</h2>
-        <p style="font-size: 18px; color: #666; line-height: 1.8; text-align: center;">Details about my professional experience updating soon....</p>
+    <div id="experience" class="section">
+        <h2>Experience</h2>
+        <p>Details about my professional experience updating soon....</p>
     </div>
 
     <!-- Education Section -->
-    <div id="education" style="padding: 60px 20px; background-color: #f7f9fc;">
-        <h2 style="font-size: 32px; margin-bottom: 30px; text-align: center; color: #333;">Education</h2>
-        <p style="font-size: 18px; color: #666; line-height: 1.8; text-align: center;">Details about my educational background updating soon....</p>
+    <div id="education" class="section">
+        <h2>Education</h2>
+        <p>Details about my educational background updating soon....</p>
     </div>
-
 </body>
 </html>
