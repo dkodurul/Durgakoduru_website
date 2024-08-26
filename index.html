@@ -60,8 +60,25 @@
         .left-side b {
             font-size: 18px;
             color: #095f7a;
-            margin: 5px 0;
+            margin: 15px 0;
         }
+	
+	.left-side b1 {
+        display: inline-block;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: #333;
+        padding: 5px 10px;
+        margin: 2px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+
+    .b1:hover {
+        background-color: #005f99;
+    }
 
         .social-group {
             display: flex;
@@ -77,28 +94,45 @@
             border-radius: 50%;
             border: 2px solid #555;
         }
+   
+       .right-side {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+        margin: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
 
-        .right-side {
-            width: 70%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 40px;
-            margin: 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
+    .right-side h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+    }
 
-        .right-side h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .right-side p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.8;
+    .right-side p {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.8;
+        background-color: rgba(255, 255, 255, 0.50);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+        text-align: justify;
+        letter-spacing: 0.5px;
+	line-spacing: 1px;
+    }
+        
+        .right-side p:hover {
+        transform: scale(1.05);
         }
 
         .button-group {
@@ -108,6 +142,7 @@
             gap: 20px;
             margin-top: 20px;
         }
+
 
         .button-group a {
             text-decoration: none;
@@ -120,17 +155,29 @@
         .button-group a.resume {
             background-color: #ee9886;
         }
+        .button-group a.resume:hover {
+        transform: scale(1.05);
+        }
 
-        .button-group a.project {
+        .button-group a.projects {
             background-color: rgba(255, 255, 255, 0.50);
+        }
+        .button-group a.projects:hover {
+        transform: scale(1.05);
         }
 
         .button-group a.experience {
             background-color: rgba(255, 255, 255, 0.50);
         }
+        .button-group a.experience:hover {
+        transform: scale(1.05);
+        }
 
         .button-group a.education {
             background-color: rgba(255, 255, 255, 0.50);
+        }
+        .button-group a.education:hover {
+        transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
@@ -166,9 +213,10 @@
         <!-- Left Side (Photo, Contact Info, Social Media) -->
         <div class="left-side">
             <img src="./assets/Durga.jpg" alt="Durga's Photo" class="profile">
-            <h3>Durga Chowdary Koduru Lokesh</h3> <!-- Added name here -->
-            <b>Email: dkodurul@kent.edu</b>
-            <b>Phone: +1 330-554-0738</b>
+            <h3>Durga Chowdary Koduru Lokesh</h3>
+	    <b1>Data Proffessional | IT consultant</b1>
+            <b>Email: dkodurul@kent.edu<br>
+            Phone: +1 330-554-0738</b>
             <div class="social-group">
                 <a href="https://www.linkedin.com/in/durgakoduri/" target="_blank">
                     <img src="./assets/linkedin.png" alt="LinkedIn">
@@ -182,15 +230,15 @@
         <div class="right-side">
             <div>
                 <h2>About Me</h2>
-                <b>
-                    I am an aspiring data scientist and data analytics professional with a passion for leveraging data to drive impactful insights. My goal is to continuously learn and grow in the field while contributing to innovative projects.
-                </b>
+                <p>
+                    "With over six years in IT, I've evolved from a cloud and DevOps specialist into a passionate data scientist and analytics engineer. My journey through Azure, AWS, and CI/CD processes has forged a unique skillset that bridges robust infrastructure with data-driven innovation. I've orchestrated cloud migrations, optimized systems, and automated workflows, but my true calling emerged in the realm of data science. Now, I leverage this diverse background to craft end-to-end data solutions that seamlessly integrate with modern application architectures. My expertise spans from building scalable data pipelines to developing sophisticated machine learning models, all aimed at extracting actionable insights from complex datasets. I thrive on applying statistical analysis and predictive modeling to solve intricate business challenges, driving strategic decision-making and operational efficiency. As I continue to push the boundaries of data science, I remain committed to continuous learning, always seeking new ways to transform raw information into impactful business outcomes. My goal is to harness the synergy between cloud technologies, DevOps practices, and cutting-edge data science techniques to deliver innovative solutions that propel organizations forward in the data-driven era.".<br><b>"Information is the oil of the 21st century, and analytics is the combustion engine." - Peter Sondergaard<b><br>
+                </p>
             </div>
             <!-- Buttons for Resume, Projects, Experience, Education -->
             <div class="button-group">
                 <a href="./assets/resume.pdf" class="resume">Download Resume</a>
 		<b>
-                <a href="#projects" class="project">Projects</a>
+                <a href="#projects" class="projects">Projects</a>
                 <a href="#experience" class="experience">Experience</a>
                 <a href="#education" class="education">Education</a>
 		</b>
@@ -217,18 +265,55 @@
         text-align: center;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
-    #projects {
-        background-color: #bdc2c2; /* Light pastel blue */
-    }
-
-    #experience {
-        background-color: #bdc2c2; /* Light pastel pink */
-    }
-
-    #education {
-        background-color: #bdc2c2; /* Light pastel orange */
-    }
+    .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .projects, .experience, .education {
+            background-color: #bdc2c2;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .projects:hover, .experience:hover, .education:hover {
+            transform: translateY(-5px);
+        }
+        .projects h3, .experience h3, .education h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.1em;
+        }
+        .experience p, .education p {
+            margin: 5px 0;
+        }
+        .coursework {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #e0e0e0;
+        }
 
     .section h2 {
         font-size: 36px;
@@ -245,23 +330,51 @@
     }
 </style>
 
-<!-- Projects Section -->
-<div id="projects" class="section">
-    <h2>Projects</h2>
-    <p>Details about my projects updating soon.....</p>
-</div>
+</head>
+<body>
+    <div class="section">
+        <h2>Projects</h2>
+        <div id="projects" class="projects">
+            <h3>Audio Translator</h3>
+            <p>Developed a Python prototype for translating audio for content creators using Google's open-source libraries.</p>
+        </div>
+        <div class="projects">
+            <h3>MyGPT</h3>
+            <p>Creating a prototype GenAI project utilizing open-source LLMs and RAG on graph databases for private datasets, designed to function as a standalone product for any specific industry.</p>
+        </div>
 
-<!-- Experience Section -->
-<div id="experience" class="section">
-    <h2>Experience</h2>
-    <p>Details about my professional experience updating soon....</p>
-</div>
+        <h2>Experience</h2>
+        <div id="experience" class="experience">
+            <h3>Data Analyst Intern</h3>
+            <p><strong>Kent State University</strong> | Kent, OHIO (2024 – Present)</p>
+            <p>Developed a revenue forecasting model using regression and time series analysis.</p>
+        </div>
+        <div class="experience">
+            <h3>Engineer</h3>
+            <p><strong>EPAM Systems INC</strong> | Bangalore, India (2022-2023)</p>
+            <p>Led DevOps implementation, managed Azure services, and enhanced security with IAM.</p>
+        </div>
+        <div class="experience">
+            <h3>Associate Consultant</h3>
+            <p><strong>KPMG Global Services</strong> | Bangalore, India (2021-2022)</p>
+            <p>Implemented IAM, streamlined cloud deployments, and optimized cloud resources.</p>
+        </div>
+        <div class="experience">
+            <h3>Junior Engineer</h3>
+            <p><strong>Mindtree Ltd.</strong> | Bangalore, India (2018-2021)</p>
+            <p>Led cloud migration to Azure, improved uptime, and reduced costs by 35%.</p>
+        </div>
 
-<!-- Education Section -->
-<div id="education" class="section">
-    <h2>Education</h2>
-    <p>Details about my educational background updating soon....</p>
-</div>
+        <h2>Education</h2>
+        <div id="education" class="education">
+            <h3>Master in Business Analytics</h3>
+            <p><strong>Kent State University</strong> | Kent, Ohio, United States (2023-Present)</p>
+            <p>GPA: 3.5/4.0</p>
+            <div class="coursework">
+                <p><strong>Coursework:</strong> Machine Learning, Database Management, Data Visualization, Data Mining, Deep Learning, Graph Databases, Neural Networks.</p>
+            </div>
+        </div>
+    </div>
 </body>
         <!-- ======= Footer Section ======= -->
         <footer>
